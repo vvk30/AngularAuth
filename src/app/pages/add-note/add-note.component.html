@@ -1,0 +1,9 @@
+
+<form #noteForm="ngForm" (ngSubmit)="addTask(noteForm)" novalidate>
+  Task:<input type="text" name="task" ngModel/><br/>
+  Description:<textarea name="description" ngModel></textarea>
+  <input type="text" name="status" value="false" hidden ngModel/>
+  <button type="submit" >Add Note</button>
+</form>
+<button type="button" (click)="back()">Back</button>
+

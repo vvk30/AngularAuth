@@ -1,0 +1,20 @@
+<div *ngIf="!loading">
+  <form #loginForm="ngForm" (ngSubmit)="loginUser(loginForm)" novalidate>
+  <label for="userName">ID:<br/>
+    <input type="text" name="username" placeholder="Enter Username" ngModel />
+  </label><br/>
+  <label for="password">Password:<br/> 
+    <input type="password" name="password" placeholder="Password" ngModel/>
+  </label><br/>
+    <button type="submit">Login</button>
+  </form>
+</div>
+<div *ngIf="loading">
+  <div class="showbox">
+  <div class="loader">
+    <svg class="circular" viewBox="25 25 50 50">
+      <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+    </svg>
+  </div>
+  </div>
+</div>
